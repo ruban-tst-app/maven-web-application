@@ -4,7 +4,7 @@
 	
 	<groupId>com.mt</groupId>
 	<artifactId>maven-web-application</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	
 	<name>maven-web-application</name>
@@ -99,13 +99,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Wallmart Release Repository</name>
-	      <url>http://192.168.134.162:8081/repository/wallmart-release/</url>
+	      <url>http://192.168.220.162:8081/repository/wallmart-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Wallmart Snapshot Repository </name>
-	      <url>http://192.168.134.162:8081/repository/wallmart-snapshot/</url>
+	      <url>http://192.168.220.162:8081/repository/wallmart-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
