@@ -1,0 +1,46 @@
+pipeline{
+ agent any
+ tools{
+ maven "maven3.6.3"
+ }
+ stages{
+    stage('CheckoutCode'){
+	steps{
+	git branch: 'development', credentialsId: '829a1896-b172-4e23-a851-0f5cddea35f4', url: 'https://github.com/ruban-tst-app/maven-web-application'
+	}
+    }
+   stage('Build'){
+	steps{
+	sh "mvn clean package"
+	}
+    }
+/*
+   stage('ExecuteSonarQubereport'){
+	steps{
+	sh "mvn clean sonar:sonar"
+	}
+    }
+
+   stage('UploadArifactIntoNexus'){
+	steps{
+	sh "mvn clean deploy
+	}
+    }
+ }
+ post{
+	success{
+	emailext body: '''Build is over-Success!
+Regards,
+Rkr''', subject: 'Build is over!', to: 'rubanrkr@gmail.com'
+	}
+	failure{
+	emailext body: '''Build is over-failed!
+Regards,
+Rkr''', subject: 'Build is over!', to: 'rubanrkr@gmail.com'
+	}
+
+	always{
+	<some default mail if fail or successe>
+	}
+*/
+}
