@@ -13,7 +13,7 @@ pipeline {
         }
         stage("deploy") {
             steps {
-                echo 'Deploying the Application' ${TAG_NAME}
+                echo 'Deploying the Application ${TAG_NAME}'
             }
         }
     }
